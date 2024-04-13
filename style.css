@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo-mario {
+  height: 200px;
+}
+
+button {
+  color: white;
+  background-color: #c51111;
+  border-radius: 3px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  transition: 1s ease-in-out;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.mario-luigi {
+  height: 500px;
+}
+
+body {
+  height: 100vh; /*100vh significa a tela inteira, 50vh metade da tela independente do tamanho do monitor*/
+}
+
+.caixa-mae {
+  display: flex; /* alinha tudo lado a lado*/
+  align-items: center; /* alinha tudo no centro pelo eixo vertical*/
+  justify-content: space-around; /*espaço entre eles pelo eixo horizontal*/
+  padding: 100px; /*distancia das bordas da tela*/
+  height: 100vh;
+}
+
+.principal {
+  width: 40%;
+}
+
+.video {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+video {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.mascara {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
+  position: fixed;
+  top: 0;
+}
+
+.link-whats img {
+  /* link-whats elemento pai -- img elemento filho, sendo assim a img é estilizada por ser o filho */
+  height: 100px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 30px; /*distanciamento dos textos*/
+  margin: 30px;
+}
+
+.header img {
+  height: 60px;
+}
+
+.header a {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.header a:hover {
+  color: #c51111;
+  font-size: 25px;
+  transition: 0, 8s ease-in-out;
+}
+
+p {
+  color: white;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.fale-conosco {
+  background-color: white;
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  position: fixed;
+  top: 30%;
+  left: -300px;
+  padding: 20px;
+  border-radius: 5px;
+  transition: left 1s ease-in-out;
+}
+
+input {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 5px;
+  outline-color: #18d80f;
+}
+
+textarea {
+  height: 100px;
+  width: 270px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 5px;
+  outline-color: #18d80f;
+}
+
+.mascara-negra {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
+  transition: visibility 1s ease-in-out;
+}
+
+@media (max-width: 1100px) {
+  p {
+    display: none;
+  }
+
+  .caixa-mae {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .principal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .mario-luigi {
+    width: 80vw;
+    height: auto;
+  }
+
+  .header img {
+    display: none;
+  }
+
+  .header {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header a {
+    font-size: 20px;
+  }
+
+}
